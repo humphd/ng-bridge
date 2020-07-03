@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+/* Include the Leaflet CSS for our map */
+@import '../node_modules/leaflet/dist/leaflet.css';
+
+html,
+body {
+  /* Force our containers to fill the viewport (NOTE: width is already 100%) */
+  height: 100%;
+  max-height: 100%;
+  /**
+   * Use a system font stack, which will work well using native fonts on all devices
+   * https://systemfontstack.com/
+   */
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  /* Get rid of any extra whitespace around the edge of the page (fill the screen) */
+  margin: 0;
+}
+
+body {
+  /* Flex all contents of <body> downward */
+  display: flex;
+  flex-direction: column;
+}

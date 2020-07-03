@@ -1,0 +1,10 @@
+h2 {
+  margin: .5em;
+}
+
+.bridge-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 1.3em;
+}

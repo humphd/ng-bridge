@@ -1,0 +1,41 @@
+/*
+  Style the element that hosts our component, see:
+  https://angular.io/guide/component-styles#host
+*/
+:host {
+  /* fill the available height */
+  height: 100%;
+}
+
+#app {
+  /* fill the available height */
+  height: 100%;
+  /* lay out child elements in a row with flexbox */
+  display: flex;
+  flex-direction: row;
+  /* don't show scrollbars, or allow content to overflow this element */
+  overflow: hidden;
+}
+
+/* Add a breakpoint so our app becomes stacked on narrow screens (mobile) */
+@media screen and (max-width: 400px) {
+  #app {
+    flex-direction: column;
+  }
+}
+
+#menu {
+  /* fill the available height */
+  height: 100%;
+  /* occupy 1 unit (1/3) of the available space in the parent horizontally */
+  flex: 1;
+  /* allow the contents of the menu to overflow (show a scrollbar) */
+  overflow: auto;
+}
+
+#bridge-info {
+  /* fill the available height */
+  height: 100%;
+  /* occupy 2 units (2/3) of the available space in the parent horizontally */
+  flex: 2;
+}

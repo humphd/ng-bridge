@@ -1,0 +1,26 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background-color: #0b3954;
+  color: #b5bec6;
+  padding: .3em;
+
+  /* Make it obvious that this is a clickable item in the DOM */
+  cursor: pointer;
+
+  /* Place a transparent border on all elements, so they don't change width on hover */
+  border-left: 4px solid transparent;
+
+  /* Instead of wrapping or cropping, add "..." if the name is too long */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+li:hover {
+  color: #C7DBE6;
+  border-left: 4px solid #bfb1c1;
+}

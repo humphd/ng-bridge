@@ -1,0 +1,5 @@
+/* Fill the available space with the map */
+#map {
+  width: 100%;
+  height: 100%;
+}
