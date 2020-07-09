@@ -25,9 +25,15 @@
  *  "width":5
  * }
  */
-export interface Bridge {
+
+// Only the bridge's meta info
+export interface BridgeId {
   id: string;
   name: string;
+}
+
+// A complete bridge, with meta info + all data
+export interface Bridge extends BridgeId {
   lat: number;
   lng: number;
   year: number;

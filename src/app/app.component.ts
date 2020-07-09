@@ -9,8 +9,4 @@ import { Bridge } from './bridge';
 export class AppComponent {
   // We'll manage the state of the currently selected bridge here
   currentBridge: Bridge;
-
-  handleBridgeChange(bridge: Bridge): void {
-    this.currentBridge = bridge;
-  }
 }

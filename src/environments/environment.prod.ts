@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  // Bridges REST API Url
+  apiUrl: 'https://imaginary-production-url.com/api'
 };

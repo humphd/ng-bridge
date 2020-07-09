@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Bridge } from '../bridge';
-import { Bridges } from '../bridges';
+import { Component, OnInit } from '@angular/core';
+import { DataManagerService } from '../data-manager.service';
+import { Observable } from 'rxjs';
+import { BridgeId } from '../bridge';
 
 @Component({
   selector: 'app-menu',
@@ -9,24 +10,26 @@ import { Bridges } from '../bridges';
 })
 export class MenuComponent implements OnInit {
 
-  bridges: Array<Bridge> = Bridges;
+  bridges$: Observable<BridgeId[]>;
+  //bridges: Array<BridgeId>;
 
-  /* We will send events out to the parent via the click emitter */
-  @Output() bridgeSelected: EventEmitter<Bridge> = new EventEmitter();
-
-  onBridgeSelected(bridge: Bridge): void {
-    this.bridgeSelected.emit(bridge);
-  }
+  constructor(
+    // Inject our DataManagerService into the MenuComponent
+    private dataService: DataManagerService
+  ) {}
 
   /**
    * Provide a "key" to track each instance of a Bridge, see:
    * https://angular.io/guide/template-syntax#ngfor-with-trackby
    */
-  trackByBridges(index: number, bridge: Bridge): string {
+  trackByBridges(index: number, bridge: BridgeId): string {
     return bridge.id;
   }
 
   ngOnInit(): void {
+    // Invoke our service's getBridges() in order to populate our bridges member.
+    //this.dataService.getBridges().subscribe(data => this.bridges = data);
+    this.bridges$ = this.dataService.getBridges();
   }
 
 }
