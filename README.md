@@ -22,6 +22,13 @@ I've recorded a series of YouTube videos showing how to build the code, and expl
 1. [Creating the bridge info panel and map components](https://www.youtube.com/watch?v=a9A1ayG9gyk&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=6)
 1. [Adding the map backend, connecting everything](https://www.youtube.com/watch?v=weLRdcaOHGM&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=7)
 
+In the [routing](https://github.com/humphd/ng-bridge/tree/routing) branch we continue to evolve this app to use Angular Routing and an HTTP REST API via Angular's HttpClient.  The work continues in these videos:
+
+1. [Switching to Angular Routing](https://www.youtube.com/watch?v=CFDw2_TrDo0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=8)
+1. [Creating an Express REST API for Bridge Data](https://www.youtube.com/watch?v=X5mFXt-uFw0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=9)
+1. [Reworking the Menu component to use Angular Routing](https://www.youtube.com/watch?v=toNdKUQWx1g&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=10)
+1. [Adding a Service to use Angular's HttpClient to use our REST API](https://www.youtube.com/watch?v=2j09hjIh52k&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=11)
+
 ## Install Dependencies
 
 To install the development and runtime dependencies, run the `npm install` command.
