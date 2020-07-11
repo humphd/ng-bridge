@@ -21,6 +21,10 @@ I've recorded a series of YouTube videos showing how to build the code, and expl
 1. [Working with the Bridge data, creating the Menu component](https://www.youtube.com/watch?v=rrw35Pm_0UQ&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=5)
 1. [Creating the bridge info panel and map components](https://www.youtube.com/watch?v=a9A1ayG9gyk&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=6)
 1. [Adding the map backend, connecting everything](https://www.youtube.com/watch?v=weLRdcaOHGM&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=7)
+1. [Switching to Angular Routing](https://www.youtube.com/watch?v=CFDw2_TrDo0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=8)
+1. [Creating an Express REST API for Bridge Data](https://www.youtube.com/watch?v=X5mFXt-uFw0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=9)
+1. [Reworking the Menu component to use Angular Routing](https://www.youtube.com/watch?v=toNdKUQWx1g&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=10)
+1. [Adding a Service to use Angular's HttpClient to use our REST API](https://www.youtube.com/watch?v=2j09hjIh52k&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=11)
 
 ## Install Dependencies
 
