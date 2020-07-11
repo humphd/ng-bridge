@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataManagerService } from '../data-manager.service';
-import { Observable } from 'rxjs';
+
 import { BridgeId } from '../bridge';
 
 @Component({
@@ -10,8 +10,7 @@ import { BridgeId } from '../bridge';
 })
 export class MenuComponent implements OnInit {
 
-  bridges$: Observable<BridgeId[]>;
-  //bridges: Array<BridgeId>;
+  bridges: Array<BridgeId>;
 
   constructor(
     // Inject our DataManagerService into the MenuComponent
@@ -28,8 +27,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
     // Invoke our service's getBridges() in order to populate our bridges member.
-    //this.dataService.getBridges().subscribe(data => this.bridges = data);
-    this.bridges$ = this.dataService.getBridges();
+    this.dataService.getBridges().subscribe(data => this.bridges = data);
   }
 
 }

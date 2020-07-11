@@ -7,6 +7,4 @@ import { Bridge } from './bridge';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // We'll manage the state of the currently selected bridge here
-  currentBridge: Bridge;
 }

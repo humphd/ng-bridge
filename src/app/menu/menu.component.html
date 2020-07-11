@@ -1,7 +1,7 @@
 <nav>
   <ul>
     <li
-      *ngFor="let bridge of bridges$ | async; trackBy: trackByBridges"
+      *ngFor="let bridge of bridges; trackBy: trackByBridges"
       routerLinkActive="selected"
     >
       <a [routerLink]="['/bridges', bridge.id]">

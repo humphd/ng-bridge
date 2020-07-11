@@ -1,6 +1,4 @@
-import { Bridge } from './bridge';
-
-export const Bridges: Array<Bridge> = [
+[
   {
   "id": "bridge-41S-138-C",
   "name": "MCKENZIE CREEK CULVERT,   Hwy. 17",
@@ -39465,5 +39463,5 @@ export const Bridges: Array<Bridge> = [
   "year": 2017,
   "length": 28,
   "width": null
-},
-];
+}
+]

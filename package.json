@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "generate-bridges": "cd tools && node csv2ts.js"
+    "generate-bridges": "cd tools && node csv2ts.js",
+    "postinstall": "cd bridge-api && npm install",
+    "server": "cd bridge-api && npm start"
   },
   "private": true,
   "dependencies": {
