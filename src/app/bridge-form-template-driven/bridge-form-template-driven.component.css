@@ -1,0 +1,59 @@
+#bridge-form-template {
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid darkgray;
+
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-gap: 15px;
+  align-items: center;
+}
+
+label {
+  font-size: 1.1em;
+}
+
+input {
+  width: 100%;
+  padding: 0.3em;
+  font-size: 1.1em;
+  border: 1px solid darkgray;
+  border-radius: 0.25em;
+}
+
+input[type="submit"] {
+  width: 150px;
+  color: white;
+  background-color: blue;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: aquamarine;
+}
+
+.button {
+  grid-column: 2 / 3;
+  text-align: right;
+}
+
+input:focus.ng-valid {
+  outline: 3px solid green;
+}
+
+input:focus.ng-invalid {
+  outline: 3px solid red;
+}
+
+#errors {
+  color: red;
+
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+

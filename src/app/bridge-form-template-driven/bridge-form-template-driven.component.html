@@ -1,0 +1,101 @@
+<form
+  id="bridge-form-template"
+  #bridgeForm='ngForm'
+  (ngSubmit)="onSubmit(bridgeForm)">
+
+  <label for="bridge-id">ID</label>
+  <input
+    id="bridge-id"
+    name="id"
+    type="text"
+    placeholder="bridge-41S-138-C"
+    required
+    autofocus
+    [(ngModel)]="id"
+    #bridgeId="ngModel"
+  >
+
+  <label for="bridge-name">Name</label>
+  <input
+    id="bridge-name"
+    name="name"
+    type="text"
+    required
+    [(ngModel)]="name"
+    #bridgeName="ngModel"
+  >
+
+  <label for="bridge-lat">Latitude</label>
+  <input
+    id="bridge-lat"
+    name="lat"
+    type="text"
+    placeholder="49.686"
+    required
+    [(ngModel)]="lat"
+    #bridgeLat="ngModel"
+  >
+
+  <label for="bridge-lng">Longitude</label>
+  <input
+    id="bridge-lng"
+    name="lng"
+    type="text"
+    placeholder="-92.4925"
+    required
+    [(ngModel)]="lng"
+    #bridgeLng="ngModel"
+  >
+
+  <label for="bridge-year">Year</label>
+  <input
+    id="bridge-year"
+    name="year"
+    type="text"
+    placeholder="Four digit year"
+    pattern="\s*[0-9]{4}\s*"
+    required
+    [(ngModel)]="year"
+    #bridgeYear="ngModel"
+  >
+
+  <label for="bridge-width">Width</label>
+  <input
+    id="bridge-width"
+    name="width"
+    type="text"
+    placeholder="(Optional) Width in metres"
+    [(ngModel)]="width"
+    #bridgeWidth="ngModel"
+  >
+
+  <label for="bridge-length">Length</label>
+  <input
+    id="bridge-length"
+    name="length"
+    type="text"
+    placeholder="(Optional) Length in metres"
+    [(ngModel)]="length"
+    #bridgeLength="ngModel"
+  >
+
+  <div class="button">
+    <input
+      id="bridge-submit"
+      type="submit"
+      name="submit"
+    >
+  </div>
+</form>
+
+<div id="errors" *ngIf="bridgeForm.invalid && bridgeForm.touched">
+  <p *ngIf="bridgeId.invalid">An ID is required.</p>
+  <p *ngIf="bridgeName.invalid">A Name is required.</p>
+  <p *ngIf="bridgeLat.invalid">A Latitude is required.</p>
+  <p *ngIf="bridgeLng.invalid">A Longitude is required.</p>
+
+  <p *ngIf="bridgeYear.errors?.required">A Year is required.</p>
+  <p *ngIf="bridgeYear.errors?.pattern">The Year must be four digits in length.</p>
+
+</div>
+

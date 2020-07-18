@@ -1,0 +1,80 @@
+#bridge-form-reactive {
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid darkgray;
+
+  /* set a max-width, so it doesn't expand with the window, using the rest as margin */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* use a grid layout for items in the form: 2 columns, with most of the width in the second. */
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  /* align all items in the grid cells center, and add 20px of space between the rows/columns */
+  align-items: center;
+  grid-gap: 15px;
+}
+
+label {
+  /* Use a better font and text size for our labels, to make them easy to read */
+  font-size: 1.1em;
+}
+
+/**
+ * Style the input controls (and textarea) so they are full width in their cells,
+ * use a larger font-size, have a light gray border, and slightly rounded corners.
+ */
+input {
+  width: 100%;
+  padding: 0.3em;
+  font-size: 1.1em;
+  border: 1px solid darkgray;
+  border-radius: 0.25em;
+}
+
+input:focus.ng-valid {
+  outline: 3px solid green;
+}
+
+input:focus.ng-invalid {
+  outline: 3px solid red;
+}
+
+/**
+ * For our two "submit" style buttons, make them stand out a bit more
+ */
+input[type="submit"] {
+  width: 150px;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  grid-column: 2 / 3;
+}
+
+/**
+ * Also do something when you hover or focus them
+ */
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #0069d9;
+}
+
+/**
+ * Move the buttons to the right side of the right column
+ */
+.button {
+  grid-column: 2 / 3;
+  text-align: right;
+}
+
+#errors {
+  margin: 1em;
+  margin-top: 0;
+
+  /* set a max-width, so it doesn't expand with the window, using the rest as margin */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: red;
+}

@@ -1,0 +1,17 @@
+#bridge-form-material {
+  margin: 1em;
+  padding: 2em;
+  border: 1px solid darkgray;
+
+  /* set a max-width, so it doesn't expand with the window, using the rest as margin */
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* use a grid layout for items in the form: 2 columns, with most of the width in the second. */
+  display: grid;
+  grid-template-columns: 1fr;
+  /* align all items in the grid cells center, and add 20px of space between the rows/columns */
+  align-items: center;
+  grid-gap: 15px;
+}

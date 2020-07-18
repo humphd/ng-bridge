@@ -1,0 +1,86 @@
+<form
+  id="bridge-form-reactive"
+  [formGroup]="bridgeForm"
+  (ngSubmit)="onSubmit()">
+
+  <label for="bridge-id">ID</label>
+  <input
+    id="bridge-id"
+    name="id"
+    type="text"
+    placeholder="bridge-41S-138-C"
+    autofocus
+    formControlName="id"
+  >
+
+  <label for="bridge-name">Name</label>
+  <input
+    id="bridge-name"
+    name="name"
+    type="text"
+    formControlName="name"
+  >
+
+  <label for="bridge-lat">Latitude</label>
+  <input
+    id="bridge-lat"
+    name="lat"
+    type="text"
+    placeholder="49.686"
+    formControlName="lat"
+  >
+
+  <label for="bridge-lng">Longitude</label>
+  <input
+    id="bridge-lng"
+    name="lng"
+    type="text"
+    placeholder="-92.4925"
+    formControlName="lng"
+  >
+
+  <label for="bridge-year">Year</label>
+  <input
+    id="bridge-year"
+    name="year"
+    type="text"
+    placeholder="Four digit year"
+    formControlName="year"
+  >
+
+  <label for="bridge-width">Width</label>
+  <input
+    id="bridge-width"
+    name="width"
+    type="text"
+    placeholder="(Optional) Width in metres"
+    formControlName="width"
+  >
+
+  <label for="bridge-length">Length</label>
+  <input
+    id="bridge-length"
+    name="length"
+    type="text"
+    placeholder="(Optional) Length in metres"
+    formControlName="length"
+  >
+
+  <div class="button">
+    <input
+      id="bridge-submit"
+      type="submit"
+      name="submit"
+    >
+  </div>
+</form>
+
+<div id="errors" *ngIf="!bridgeForm.valid && bridgeForm.dirty">
+  <p *ngIf="bridgeForm.controls['id'].invalid">An ID is required.</p>
+  <p *ngIf="bridgeForm.controls['name'].invalid">A Name is required.</p>
+  <p *ngIf="bridgeForm.controls['lat'].invalid">A Latitude is required.</p>
+  <p *ngIf="bridgeForm.controls['lng'].invalid">A Longitude is required.</p>
+
+  <p *ngIf="bridgeForm.controls['year'].errors?.required">A Year is required.</p>
+  <p *ngIf="bridgeForm.controls['year'].errors?.pattern">The Year must be four digits in length.</p>
+</div>
