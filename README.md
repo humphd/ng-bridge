@@ -25,6 +25,9 @@ I've recorded a series of YouTube videos showing how to build the code, and expl
 1. [Creating an Express REST API for Bridge Data](https://www.youtube.com/watch?v=X5mFXt-uFw0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=9)
 1. [Reworking the Menu component to use Angular Routing](https://www.youtube.com/watch?v=toNdKUQWx1g&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=10)
 1. [Adding a Service to use Angular's HttpClient to use our REST API](https://www.youtube.com/watch?v=2j09hjIh52k&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=11)
+1. [Adding an Angular Template Driven Form](https://www.youtube.com/watch?v=haXVoC43k6U&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=13)
+1. [Refactoring to a Reactive Form](https://www.youtube.com/watch?v=XPa0DKVHuVQ&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=14)
+1. [Using Angular Material Form Components](https://www.youtube.com/watch?v=M_Fn5NGkDB0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=15)
 
 ## Install Dependencies
 
