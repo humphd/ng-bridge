@@ -28,5 +28,4 @@ export class BridgeInfoPanelComponent implements OnInit {
   length(): string {
     return prettyPrintDimension(this.bridge.length);
   }
-
 }
