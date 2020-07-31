@@ -7,9 +7,25 @@ import { BridgeFormTemplateDrivenComponent } from './bridge-form-template-driven
 import { BridgeFormReactiveComponent } from './bridge-form-reactive/bridge-form-reactive.component';
 import { BridgeFormMaterialComponent } from './bridge-form-material/bridge-form-material.component';
 
+import { LoginComponent } from './login/login.component';
+
+import { BridgeGuard } from './bridge.guard';
+
 const routes: Routes = [
-  { path: 'bridges/:id', component: BridgeInfoComponent },
-  { path: 'bridges', component: BridgeInfoComponent },
+  // We have two "guarded" routes. Users must be authenticated (have a valid token)
+  {
+    path: 'bridges/:id',
+    canActivate: [ BridgeGuard ],
+    component: BridgeInfoComponent
+  },
+  {
+    path: 'bridges',
+    canActivate: [ BridgeGuard ],
+    component: BridgeInfoComponent
+  },
+
+  // All other routes are open to anyone
+  { path: 'login', component: LoginComponent },
   { path: 'new-template', component: BridgeFormTemplateDrivenComponent },
   { path: 'new-reactive', component: BridgeFormReactiveComponent },
   { path: 'new-material', component: BridgeFormMaterialComponent },

@@ -18,6 +18,10 @@ import { BridgeFormReactiveComponent } from './bridge-form-reactive/bridge-form-
 import { BridgeFormMaterialComponent } from './bridge-form-material/bridge-form-material.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from '../environments/environment';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,11 +31,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BridgeInfoMapComponent,
     BridgeFormTemplateDrivenComponent,
     BridgeFormReactiveComponent,
-    BridgeFormMaterialComponent
+    BridgeFormMaterialComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    // Add an HTTP Injector, to add our token to any requests to the REST API
+    JwtModule.forRoot({
+      config: {
+        // Here is how we'll get the token, if it exists
+        tokenGetter: () => localStorage.getItem('token'),
+        // The list of domains that require adding the token (don't do it for others)
+        allowedDomains: [ new URL(environment.apiUrl).host ]
+      }
+    }),
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

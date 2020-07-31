@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input
+        type="text"
+        matInput
+        name="username"
+        [(ngModel)]="user.username"
+        required
+        autofocus
+      >
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        name="password"
+        [(ngModel)]="user.password"
+        required
+      >
+    </mat-form-field>
+  </p>
+
+  <p *ngIf="error" class="error">
+    {{ error }}
+  </p>
+
+  <div class="button">
+    <button type="submit" mat-button>Login</button>
+  </div>
+</form>

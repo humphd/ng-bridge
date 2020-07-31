@@ -17,7 +17,9 @@ export class BridgeInfoMapComponent implements OnInit, AfterViewInit, OnChanges 
 
   ngAfterViewInit(): void {
     // Pass the id of our <div>
-    this.map = new LeafletMap('map');
+    if (!this.map) {
+      this.map = new LeafletMap('map');
+    }
   }
 
   ngOnChanges(changes: SimpleChanges): void {

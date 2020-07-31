@@ -47,7 +47,6 @@ export class DataManagerService {
     const url = `${this.apiUrl}/bridges`;
     return this.http.get<BridgeId[]>(url)
       .pipe(
-        retry(2), // retry a failed request up to 2 times
         catchError(this.handleError)
       );
   }
@@ -61,7 +60,6 @@ export class DataManagerService {
     const url = `${this.apiUrl}/bridges/${id}`;
     return this.http.get<Bridge>(url)
       .pipe(
-        retry(2), // retry a failed request up to 2 times
         catchError(this.handleError)
       );
   }
