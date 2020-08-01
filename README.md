@@ -35,6 +35,20 @@ In the [forms](https://github.com/humphd/ng-bridge/tree/forms) branch we continu
 1. [Refactoring to a Reactive Form](https://www.youtube.com/watch?v=XPa0DKVHuVQ&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=14)
 1. [Using Angular Material Form Components](https://www.youtube.com/watch?v=M_Fn5NGkDB0&list=PLJgO3yLojCBPEt6rnKsQnI2-8BdyU5z1K&index=15)
 
+In the [tests](https://github.com/humphd/ng-bridge/tree/tests) branch we continue to evolve this app to include automated tests.  The work continues in these videos:
+
+1. [Brief discussion of Promises and async/await, which are used in some tests](https://youtu.be/14DnyDgC47s)
+1. [Writing automated tests with Jest for our node.js bridge module](https://youtu.be/dIAkdJJcYc0)
+1. [Writing automated tests with Jest and Supertest for our Express routes REST API](https://youtu.be/0D9s9zF_170)
+1. [Writing automated tests with Jasmine and Karma for an Angular Component](https://youtu.be/nK_ZAxm-GD0)
+
+In the [auth](https://github.com/humphd/ng-bridge/tree/auth) branch we continue to evolve this app to add JSON Web Token based Authentication and Authorization.  The work continues in these videos:
+
+1. [Brief discussion of web security and the difference between encoding, hashing, salting, and encryption](https://youtu.be/jCf6wCw45KU)
+1. [Adding user accounts and the ability to register and login to our backend REST API](https://youtu.be/OrSl2eVBbkc)
+1. [Securing our REST API using Passport.js and JSON Web Tokens](https://youtu.be/UR2DW9QB1eM)
+1. [Adding JWT-based security to our app using @auth0/angular-jwt](https://youtu.be/V5gQxyIbJmA)
+
 ## Install Dependencies
 
 To install the development and runtime dependencies, run the `npm install` command.
